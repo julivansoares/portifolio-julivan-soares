@@ -29,7 +29,7 @@ export default function Home(){
              <BsLinkedin alt="icone-Linkedin"/>
            </a>
          </div>
-          <Link href="../public/JULIVAN_SOARES.pdf" target="_blank" className={style.download}>
+          <Link href="/JULIVAN_SOARES.pdf" download="JULIVAN_SOARES.pdf" target="_blank" className={style.download}>
              Download CV
           </Link>
        </div>
