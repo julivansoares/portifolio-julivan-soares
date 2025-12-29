@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* projetos cursos */
+.resumo {
+  background: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
+  color: white;
+  border: 1PX SOLID rgb(21, 255, 0);
+}
+
+.resumo .resumo_secundario {
+  margin: 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+  color: aliceblue;
+}
+
+.resumo .resumo_secundario h1 {
+  font-size: 2.5rem;
+  color: #00EEFF;
+  margin-bottom: 15px;
+  font-family: "Berkshire Swash", cursive;
+}
+
+.resumo_secundario p {
+  color: #707070;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.resumo .resumo_secundario div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.resumo .resumo_secundario span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #00EEFF;
+}
+
+.sub_resumo {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 10px;
+  align-items: start;
+}
+
+.sub_resumo h2 {
+  font-family: "poppins";
+  font-size: 1.5rem;
+  background-color: #00EEFF;
+  justify-self: start;
+  padding: 10px;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+.sub_resumo h2 i {
+  margin-right: 10px;
+}
+
+/* EXPERIÊNCIA */
+.sub_resumo .conteudo_experiencia {
+  margin-bottom: 30px;
+  grid-column: 1;
+  grid-row: 2;
+  border: 1PX SOLID RED;
+  color: #ff3300;
+}
+
+.conteudo_experiencia ul {
+  color: #00EEFF;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+  width: 80px;
+  margin-left: 248px;
+}
+
+.sub_resumo .conteudo_experiencia div {
+  background-color: #222;
+  animation: secaoLado 0.8s ease-in-out forwards;
+  padding: 40px;
+  position: relative;
+  display: none;
+}
+
+.sub_resumo .conteudo_experiencia div.ativo {
+  display: block;
+}
+
+.sub_resumo .conteudo_experiencia div::before {
+  content: "";
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #222;
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  display: inline-block;
+}
+
+.sub_resumo .conteudo_experiencia div span {
+  color: #00EEFF;
+  font-family: "poppins";
+  font-weight: bold;
+  margin-left: 400px;
+}
+
+.sub_resumo .conteudo_experiencia div h3 {
+  font-family: "poppins";
+  margin: 10px 0;
+}
+
+.sub_resumo .conteudo_experiencia div p {
+  color: #fd0808;
+  font-size: 1.1rem;
+}
+
+.sub_resumo .conteudo_experiencia ul li.ativo {
+  color: #3e3d3d;
+}
+
+/* EDUCAÇÃO */
+.sub_resumo .conteudo_educacao {
+  margin-bottom: 30px;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.sub_resumo .conteudo_educacao div {
+  background-color: #222;
+  padding: 40px;
+  position: relative;
+  animation: secaoLado 0.8s ease-in-out forwards;
+  display: none;
+}
+
+.sub_resumo .conteudo_educacao div.ativo {
+  display: block;
+}
+
+.conteudo_educacao ul {
+  color: #00EEFF;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: 250px;
+  width: 50px;
+}
+
+.sub_resumo .conteudo_educacao div::before {
+  content: "";
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #222;
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  display: inline-block;
+}
+
+.sub_resumo .conteudo_educacao div span {
+  color: #00EEFF;
+  font-family: "poppins";
+  font-weight: bold;
+}
+
+.sub_resumo .conteudo_educacao div h3 {
+  font-family: "poppins";
+  margin: 10px 0;
+}
+
+.sub_resumo .conteudo_educacao div p {
+  color: #707070;
+  font-size: 1.1rem;
+}
+
+.sub_resumo .conteudo_educacao ul li.ativo {
+  color: #3e3d3d;
+}
+
+@keyframes secaoLado {
+  from {
+    transition: 0.5s;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}/*# sourceMappingURL=style.module.css.map */

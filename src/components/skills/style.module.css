@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* SEÇÃO TECNOLOGIAS */
+.servicos {
+  background: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
+}
+
+.titulo_secundario {
+  margin: 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+  color: aliceblue;
+}
+
+.titulo_secundario h1 {
+  font-size: 2.5rem;
+  color: #00EEFF;
+  margin-bottom: 15px;
+  font-family: "Berkshire Swash", cursive;
+}
+
+.titulo_secundario p {
+  color: #535353;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.titulo_secundario div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.titulo_secundario span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #00EEFF;
+}
+
+.menu_servicos {
+  padding: 60px;
+  color: rgb(194, 38, 38);
+}
+
+.menu_servicos ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_servicos ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  display: grid;
+  gap: 30px;
+  text-align: center;
+  width: 190px;
+  align-content: center;
+  height: 150px;
+  background-color: #222;
+  border-radius: 15px;
+}
+
+.servicos .menu_servicos ul li img {
+  width: 85px;
+  height: 87.3px;
+  margin-left: 50px;
+}
+
+.servicos .menu_servicos ul li .node {
+  width: 75px;
+  margin-left: 49px;
+}
+
+.menu_servicos ul li h3 {
+  color: #f7f7f7;
+  font-size: 1.6rem;
+  font-size: "poppins";
+  font-weight: 500;
+}
+
+.menu_servicos li::before {
+  content: "";
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.menu_servicos li::after {
+  content: "";
+  transition: 0.5s ease-in-out;
+  border-radius: 8px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.menu_servicos li:hover::before {
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #00EEFF;
+  border-right: 2px solid #00EEFF;
+}
+
+.menu_servicos li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #00EEFF;
+  border-left: 2px solid #00EEFF;
+}/*# sourceMappingURL=style.module.css.map */

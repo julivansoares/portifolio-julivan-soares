@@ -1,0 +1,12 @@
+   
+.video {
+     position: fixed; /* Use 'fixed' para garantir que o vídeo ocupe toda a tela. */
+     top: 0;
+     left: 0;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -1;
+ }
+ 
