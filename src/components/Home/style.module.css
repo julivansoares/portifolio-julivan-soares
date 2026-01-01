@@ -52,26 +52,22 @@
 }
 
 .redes {
-  height: 110%;
-  width: 50%;
+  height: 110px;
+  width: 300px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-left: 40px;
   margin-top: 170px;
-  height: 110px;
-  width: 300px;
 }
 
 .subRedes {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: center;
+  gap: 20px;
   height: 35%;
   margin-bottom: 10px;
-  margin-left: 20px;
 }
 .subRedes a {
   font-size: 30px;
@@ -83,12 +79,12 @@
   color: #00EEFF;
   border: 2px solid #00EEFF;
   width: 140px;
-  margin-left: 20px;
   padding: 10px;
   border-radius: 20px;
   font-family: "poppins", sans-serif;
   font-weight: 600;
   text-decoration: none;
+  text-align: center;
 }
 
 .download:hover {

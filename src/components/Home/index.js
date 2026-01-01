@@ -12,11 +12,9 @@ export default function Home(){
        
        <div className={style.subHome}>
        <h2>Olá sou</h2>
-       <h2 className={style.digitando}>Desenvolvedor Full Stack</h2>
+       <h2 className={style.digitando}>Analista de Suporte</h2>
        <p>
-         Sou uma pessoa dedicada e comprometida com as atividades atribuídas a mim.
-         Busco dar continuidade a minha carreira profissional com intuito de
-         atuar como desenvolvedor Fullstack
+        Sou um profissional dedicado e comprometido, focado no desenvolvimento da minha carreira para atuar como analista de suporte e desenvolvedor.
        </p>
  
        <div className={style.redes}>

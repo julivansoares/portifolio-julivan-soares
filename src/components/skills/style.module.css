@@ -56,11 +56,11 @@
   cursor: pointer;
   position: relative;
   padding: 10px;
-  display: grid;
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   width: 190px;
-  align-content: center;
   height: 150px;
   background-color: #222;
   border-radius: 15px;
@@ -69,12 +69,14 @@
 .servicos .menu_servicos ul li img {
   width: 85px;
   height: 87.3px;
-  margin-left: 50px;
+  margin: 0 auto;
+  display: block;
 }
 
 .servicos .menu_servicos ul li .node {
   width: 75px;
-  margin-left: 49px;
+  margin: 0 auto;
+  display: block;
 }
 
 .menu_servicos ul li h3 {
