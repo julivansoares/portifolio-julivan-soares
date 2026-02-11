@@ -1,73 +1,100 @@
 "use client"
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import style from './style.module.scss'
 import './style.css'
 
-
-
 export default function Summary() {
-  useEffect(() => {
-
-    function sobreMim() {
-      const divExperiencia = document.querySelectorAll("#conteudo_experiencia div");
-      const liExperiencia = document.querySelectorAll("#conteudo_experiencia ul li");
-      const divEducacao = document.querySelectorAll("#conteudo_educacao div");
-      const liEducacao = document.querySelectorAll("#conteudo_educacao ul li");
-      console.log(divExperiencia, liExperiencia);
-
-      divEducacao[0].classList.add('ativo');
-      liEducacao[0].classList.add('ativo');
-      divExperiencia[0].classList.add('ativo');
-      liExperiencia[0].classList.add('ativo');
-    
-    
-      function slideShowExperiencia(index) {
-        divExperiencia.forEach((div) => {
-          div.classList.remove("ativo");
-        });
-        liExperiencia.forEach((botao) => {
-          botao.classList.remove("ativo");
-        });
-        console.log(index)
-        divExperiencia[index].classList.add('ativo');
-        liExperiencia[index].classList.add('ativo');
-        console.log(divExperiencia, liExperiencia);
-      }
-    
-      function slideShowEducacao(index) {
-        divEducacao.forEach((div) => {
-          div.classList.remove("ativo");
-        });
-        liEducacao.forEach((botao) => {
-          botao.classList.remove("ativo");
-        });
-       
-        divEducacao[index].classList.add('ativo');
-        liEducacao[index].classList.add('ativo');
-      }
-    
-    
-      liExperiencia.forEach((event, index) => {
-        event.addEventListener("click", () => {
-          slideShowExperiencia(index);
-        });
-      });
-    
-      liEducacao.forEach((event, index) => {
-        event.addEventListener("click", () => {
-          slideShowEducacao(index);
-       
-        });
-      });
-      
+  // ====== DADOS ESTRUTURADOS ======
+  // Array com todas as experiências profissionais
+  const experiencias = [
+    {
+      id: 0,
+      periodo: "2021 - Atual",
+      empresa: "Nome da Empresa",
+      titulo: "Atendimento de suporte de Nível 1",
+      descricao: "Registro, direcionamento e solução nos chamados técnicos da fila por meio do sistema de gestão de chamados execução nos atendimentos técnicos por acesso remoto, criação e apoio na atualização de base de conhecimentos técnicos e/ou atendimento da demanda"
+    },
+    {
+      id: 1,
+      periodo: "2020 - 2021",
+      empresa: "Nome da Empresa",
+      titulo: "Técnico de Informática",
+      descricao: "Realização de atendimento aos colaboradores dentro da sua área de atuação. Realização de manutenção corretiva e preventiva de computadores, impressoras e rede da instituição. Responsável pelo cuidado e manutenção dos laboratórios de informática que são disponibilizados para acesso dos alunos."
+    },
+    {
+      id: 2,
+      periodo: "2019 - 2020",
+      empresa: "Nome da Empresa",
+      titulo: "Desenvolvedor Web Junior",
+      descricao: "Desenvolvimento de aplicações web utilizando HTML, CSS e JavaScript. Colaboração com equipa na criação de interfaces responsivas e implementação de funcionalidades interativas. Suporte técnico e manutenção de sistemas existentes."
+    },
+    {
+      id: 3,
+      periodo: "2018 - 2019",
+      empresa: "Nome da Empresa",
+      titulo: "Estagiário de TI",
+      descricao: "Auxílio na manutenção de servidores e redes. Suporte técnico básico a usuários. Documentação de processos e procedimentos. Aprendizado prático de infraestrutura de TI e boas práticas."
     }
-    sobreMim()
+  ];
 
-  }, [])
+  // Array com todas as graduações e cursos
+  const educacoes = [
+    {
+      id: 0,
+      periodo: "2017 - 2019",
+      titulo: "Tecnólogo em Análise e desenvolvimento de sistemas",
+      instituicao: "Centro Universitário Jorge Amado"
+    },
+    {
+      id: 1,
+      periodo: "2022 - 2022",
+      titulo: "Curso Intensivo de Desenvolvimento de Software - Fullstack",
+      instituicao: "Cubos Academy"
+    }
+  ];
+
+  // ====== ESTADOS DE CONTROLE ======
+  // Índice para rastrear qual experiência está sendo exibida
+  const [indiceExperiencia, setIndiceExperiencia] = useState(0);
+  // Índice para rastrear qual educação está sendo exibida
+  const [indiceEducacao, setIndiceEducacao] = useState(0);
+
+  useEffect(() => {
+    // ====== GERENCIADOR DE EVENTOS ======
+    // Esta função inicializa todos os event listeners e lógica de navegação
+    const inicializarNavegacao = () => {
+      // Seleciona todos os indicadores (botões) de experiência
+      const botoesExperiencia = document.querySelectorAll("#conteudo_experiencia ul li");
+      // Seleciona todos os indicadores (botões) de educação
+      const botoesEducacao = document.querySelectorAll("#conteudo_educacao ul li");
+
+      // Adiciona listeners a cada botão de experiência
+      botoesExperiencia.forEach((botao, index) => {
+        // Remove listeners anteriores para evitar duplicação
+        botao.onclick = null;
+        // Adiciona novo listener para navegar para esta experiência
+        botao.addEventListener("click", () => {
+          setIndiceExperiencia(index);
+        });
+      });
+
+      // Adiciona listeners a cada botão de educação
+      botoesEducacao.forEach((botao, index) => {
+        // Remove listeners anteriores para evitar duplicação
+        botao.onclick = null;
+        // Adiciona novo listener para navegar para esta educação
+        botao.addEventListener("click", () => {
+          setIndiceEducacao(index);
+        });
+      });
+    };
+
+    // Executa a inicialização após a renderização
+    inicializarNavegacao();
+  }, [indiceExperiencia, indiceEducacao])
   return (
-
     <div className={style.resumo} id="resume">
-
+      {/* Header da seção de Resumo */}
       <div className={style.resumo_secundario}>
         <h1>Resumo</h1>
         <p>Perfil Profissional - Tudo sobre mim</p>
@@ -78,113 +105,64 @@ export default function Summary() {
           <span></span>
         </div>
       </div>
-      <div class={style.sub_resumo}>
-        <h2 className={style.experiencia}> <i className="fa-solid fa-handshake"></i> EXPERIÊNCIA</h2>
-{/* 
-        <div className={style.conteudo_experiencia} id='conteudo_experiencia'>
 
-          <div>
-            <span>2021 - Atual</span>
-            <h3>Atendimento de suporte de Nível 1 </h3>
-            <p>Registro, direcionamento e solução nos chamados
-              técnicos da fila por meio do sistema de gestão de
-              chamados
-              execução nos atendimentos técnicos por acesso
-              remoto, criação e apoio na atualização de base de
-              conhecimentos técnicos e/ou atendimento da
-              demanda
-            </p>
-          </div>
-          <div>
-            <span>2020-2021</span>
+      <div className={style.sub_resumo}>
+        {/* ====== SEÇÃO EXPERIÊNCIA ====== */}
+        <h2 className={style.experiencia}>
+          <i className="fa-solid fa-handshake"></i> EXPERIÊNCIA
+        </h2>
 
-            <h3>Técnico de Informática</h3>
-
-            <p>Realização de atendimento aos colaboradores dentro da
-              sua área de atuação.
-              Realização de manutenção corretiva e preventiva de
-              computadores, impressoras e rede da instituição.
-              Responsável pelo cuidado e manutenção dos
-              laboratórios de informática que são disponibilizados para
-              acesso dos alunos.
-            </p>
-          </div>
-          <ul>
-            <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-            <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-          </ul>
-        </div> */}
-        
+        {/* Container de conteúdo dinâmico de Experiência */}
         <div className="conteudo-experiencia" id='conteudo_experiencia'>
+          {/* Renderiza dinamicamente cada experiência do array */}
+          {experiencias.map((exp, index) => (
+            <div key={exp.id} className={index === indiceExperiencia ? "ativo" : ""}>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', alignItems: 'center', marginBottom: '20px' }}>
+                <strong style={{ color: '#00EEFF', fontSize: '0.9rem' }}>{exp.empresa}</strong>
+                <span style={{ margin: 0, fontSize: '0.9rem' }}>{exp.periodo}</span>
+              </div>
+              <h3 style={{ marginTop: '0', marginBottom: '15px' }}>{exp.titulo}</h3>
+              <p style={{ marginTop: '20px', lineHeight: '1.6' }}>{exp.descricao}</p>
+            </div>
+          ))}
 
-          <div>
-            <span>2021 - Atual</span>
-            <h3>Atendimento de suporte de Nível 1 </h3>
-            <p>Registro, direcionamento e solução nos chamados
-              técnicos da fila por meio do sistema de gestão de
-              chamados
-              execução nos atendimentos técnicos por acesso
-              remoto, criação e apoio na atualização de base de
-              conhecimentos técnicos e/ou atendimento da
-              demanda
-            </p>
-          </div>
-          <div>
-            <span>2020-2021</span>
-
-            <h3>Técnico de Informática</h3>
-
-            <p>Realização de atendimento aos colaboradores dentro da
-              sua área de atuação.
-              Realização de manutenção corretiva e preventiva de
-              computadores, impressoras e rede da instituição.
-              Responsável pelo cuidado e manutenção dos
-              laboratórios de informática que são disponibilizados para
-              acesso dos alunos.
-            </p>
-          </div>
+          {/* Indicadores (botões) para navegar entre experiências */}
           <ul>
-            <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-            <li><i className="fa-sharp fa-solid fa-circle"></i></li>
+            {experiencias.map((_, index) => (
+              <li key={index} className={index === indiceExperiencia ? "ativo" : ""}>
+                <i className="fa-sharp fa-solid fa-circle"></i>
+              </li>
+            ))}
           </ul>
         </div>
-        <h2 className={style.educacao}><i className="fa-solid fa-book"></i> Educação</h2>
-       {/*  <div className={style.conteudo_educacao} id='conteudo_educacao'>
-          <div>
-            <span>2017 - 2019</span>
-            <h3>Tecnólogo em Análise e desenvolvimento de sistemas</h3>
-            <p>Centro Universitário Jorge Amado</p>
-          </div>
-          <div>
-            <span>2022 - 2022</span>
-            <h3>Curso Intensivo de Desenvolvimento de Software - Fullstack</h3>
-            <p>Cubos Academy</p>
-          </div>
-          <ul>
-            <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-            <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-          </ul>
-        </div> */}
-          <div className="conteudo-educacao" id='conteudo_educacao'>
-        <div>
-          <span>2017 - 2019</span>
-          <h3>Tecnólogo em Análise e desenvolvimento de sistemas</h3>
-          <p>Centro Universitário Jorge Amado</p>
-        </div>
-        <div>
-          <span>2022 - 2022</span>
-          <h3>Curso Intensivo de Desenvolvimento de Software - Fullstack</h3>
-          <p>Cubos Academy</p>
-        </div>
-        <ul>
-          <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-          <li><i className="fa-sharp fa-solid fa-circle"></i></li>
-        </ul>
-      </div>
-      </div>
 
+        {/* ====== SEÇÃO EDUCAÇÃO ====== */}
+        <h2 className={style.educacao}>
+          <i className="fa-solid fa-book"></i> Educação
+        </h2>
+
+        {/* Container de conteúdo dinâmico de Educação */}
+        <div className="conteudo-educacao" id='conteudo_educacao'>
+          {/* Renderiza dinamicamente cada educação do array */}
+          {educacoes.map((edu, index) => (
+            <div key={edu.id} className={index === indiceEducacao ? "ativo" : ""}>
+              <span style={{ marginBottom: '20px' }}>{edu.periodo}</span>
+              <h3 style={{ marginTop: '0', marginBottom: '15px' }}>{edu.titulo}</h3>
+              <p style={{ marginTop: '20px', lineHeight: '1.6' }}>{edu.instituicao}</p>
+            </div>
+          ))}
+
+          {/* Indicadores (botões) para navegar entre educações */}
+          <ul>
+            {educacoes.map((_, index) => (
+              <li key={index} className={index === indiceEducacao ? "ativo" : ""}>
+                <i className="fa-sharp fa-solid fa-circle"></i>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
-
   )
 }
 

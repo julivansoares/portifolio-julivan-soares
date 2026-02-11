@@ -20,7 +20,7 @@ export default  function Nav(){
            </span>
           <ul className={`${menumobile ? style.open : style.close} animate__animated  animate__bounceInDown`}>
             <li className="animate__animated  animate__pulse">
-              <a href="#home" >Home</a>
+              <a href="#home" >Início</a>
         
             </li>
             <li>

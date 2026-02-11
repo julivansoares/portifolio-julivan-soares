@@ -18,14 +18,24 @@
     margin-left: 248px;
 }
 
+.conteudo-experiencia ul li {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.conteudo-experiencia ul li:hover {
+    transform: scale(1.2);
+}
+
 
 
 .conteudo-experiencia div {
     background-color: #222;
     animation: secaoLado .8s ease-in-out forwards;
-    padding: 40px;
+    padding: 25px 30px;
     position: relative;
     display: none;
+    min-height: auto;
 
 }
 
@@ -56,12 +66,14 @@
 
 .conteudo-experiencia div h3 {
     font-family: 'poppins';
-    margin: 10px 0;
+    margin: 8px 0;
+    font-size: 1rem;
 }
 
 .conteudo-experiencia div p {
     color: #707070;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 8px 0;
 }
 
 .conteudo-experiencia ul li.ativo {
@@ -78,10 +90,11 @@
 
 .conteudo-educacao div {
     background-color: #222;
-    padding: 40px;
+    padding: 25px 30px;
     position: relative;
     animation: secaoLado .8s ease-in-out forwards;
     display: none;
+    min-height: auto;
 }
 
 .conteudo-educacao div.ativo {
@@ -99,7 +112,15 @@
     justify-content: center;
     margin-left: 250px;
     width: 50px;
+}
 
+.conteudo-educacao ul li {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.conteudo-educacao ul li:hover {
+    transform: scale(1.2);
 }
 
 .conteudo-educacao div::before {
@@ -120,12 +141,14 @@
 
 .conteudo-educacao div h3 {
     font-family: 'poppins';
-    margin: 10px 0;
+    margin: 8px 0;
+    font-size: 1rem;
 }
 
 .conteudo-educacao div p {
     color: #707070;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 8px 0;
 }
 
 .conteudo-educacao ul li.ativo {

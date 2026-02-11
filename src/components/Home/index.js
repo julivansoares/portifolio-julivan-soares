@@ -28,7 +28,7 @@ export default function Home(){
            </a>
          </div>
           <Link href="/JULIVAN_SOARES.pdf" download="JULIVAN_SOARES.pdf" target="_blank" className={style.download}>
-             Download CV
+             Baixar Currículo
           </Link>
        </div>
  
