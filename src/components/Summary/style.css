@@ -9,22 +9,31 @@
 
 .conteudo-experiencia ul {
     color: #00EEFF;
-    gap: 10px;
+    gap: 25px;
     display: flex;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
     justify-content: center;
-    width: 80px;
-    margin-left: 248px;
+    flex-wrap: wrap;
+    padding: 15px;
 }
 
 .conteudo-experiencia ul li {
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
 }
 
 .conteudo-experiencia ul li:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
+    background-color: rgba(0, 238, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
 }
 
 
@@ -105,22 +114,31 @@
 
 .conteudo-educacao ul {
     color: #00EEFF;
-    gap: 10px;
+    gap: 25px;
     display: flex;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
     justify-content: center;
-    margin-left: 250px;
-    width: 50px;
+    flex-wrap: wrap;
+    padding: 15px;
 }
 
 .conteudo-educacao ul li {
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
 }
 
 .conteudo-educacao ul li:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
+    background-color: rgba(0, 238, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
 }
 
 .conteudo-educacao div::before {
