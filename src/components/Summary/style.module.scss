@@ -100,20 +100,23 @@ $cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
 }
 
 .conteudo_experiencia ul li {
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    padding: 8px;
+    padding: 4px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    color: #00EEFF;
 
     &:hover {
         transform: scale(1.4);
-        background-color: rgba(0, 238, 255, 0.1);
-        box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+        background-color: rgba(0, 238, 255, 0.3);
+        box-shadow: 0 0 15px rgba(0, 238, 255, 0.8);
+        opacity: 1;
     }
 }
 
@@ -162,7 +165,11 @@ $cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
 }
 
 .sub_resumo .conteudo_experiencia ul li.ativo {
-    color: #3e3d3d;
+    color: #00EEFF;
+    background-color: rgba(0, 238, 255, 0.6);
+    box-shadow: 0 0 25px rgba(0, 238, 255, 1);
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 /* EDUCAÇÃO */
@@ -199,20 +206,23 @@ $cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
 }
 
 .sub_resumo .conteudo_educacao ul li {
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    padding: 8px;
+    padding: 4px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    color: #00EEFF;
 
     &:hover {
         transform: scale(1.4);
-        background-color: rgba(0, 238, 255, 0.1);
-        box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+        background-color: rgba(0, 238, 255, 0.3);
+        box-shadow: 0 0 15px rgba(0, 238, 255, 0.8);
+        opacity: 1;
     }
 }
 
@@ -243,7 +253,11 @@ $cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
 }
 
 .sub_resumo .conteudo_educacao ul li.ativo {
-    color: #3e3d3d;
+    color: #00EEFF;
+    background-color: rgba(0, 238, 255, 0.6);
+    box-shadow: 0 0 25px rgba(0, 238, 255, 1);
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 
