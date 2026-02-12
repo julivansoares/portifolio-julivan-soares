@@ -24,7 +24,7 @@ export default  function Nav(){
             <a href="https://www.linkedin.com/in/julivan-soares/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <BsLinkedin />
             </a>
-            <a className={style.download} href="/JULIVAN_SOARES.pdf" download aria-label="Baixar currículo">Baixar</a>
+            <a className={style.download} href="/JULIVAN_SOARES.pdf" download aria-label="Baixar currículo">Download</a>
           </div>
           <span onClick={()=>setmenuMobile(!menumobile)}>
           {menumobile ?  <h1>x</h1>: <AiOutlineMenu />}
