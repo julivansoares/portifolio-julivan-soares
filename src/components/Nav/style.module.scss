@@ -47,6 +47,29 @@ $nome-menu:#00EEFF;
     width: 370px;
     margin-right: 45px;  
     }
+    .socials{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        margin-right:20px;
+    }
+    .socials a{
+        color: $nome-menu;
+        font-size: 1.2rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-decoration:none;
+    }
+    .download{
+        background: transparent;
+        border: 1px solid $nome-menu;
+        padding: 6px 10px;
+        border-radius: 12px;
+        color: $nome-menu;
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: none;
+    }
     li a{
         color: $nome-menu;
         text-decoration: none;

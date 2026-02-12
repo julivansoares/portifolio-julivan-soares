@@ -4,6 +4,8 @@ import 'animate.css';
 import { useState } from "react";
 
 import {AiOutlineMenu} from 'react-icons/ai';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import Link from 'next/link';
 
 
 
@@ -15,6 +17,15 @@ export default  function Nav(){
       <header className={style.header}>
         <nav className={style.nav}>
           <h1 className={`${style.nome} animate__animated  animate__pulse` }  > Julivan Soares</h1>
+          <div className={style.socials}>
+            <a href="https://github.com/julivansoares" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <BsGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/julivan-soares/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <BsLinkedin />
+            </a>
+            <a className={style.download} href="/JULIVAN_SOARES.pdf" download aria-label="Baixar currículo">Baixar</a>
+          </div>
           <span onClick={()=>setmenuMobile(!menumobile)}>
           {menumobile ?  <h1>x</h1>: <AiOutlineMenu />}
            </span>

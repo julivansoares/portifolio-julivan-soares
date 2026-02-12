@@ -17,20 +17,7 @@ export default function Home(){
         Sou um profissional dedicado e comprometido, focado no desenvolvimento da minha carreira para atuar como analista de suporte e desenvolvedor.
        </p>
  
-       <div className={style.redes}>
-         <div className={style.subRedes}>
-           <a className={style.black} href="https://github.com/julivansoares" target="_blank">
-             <BsGithub alt="gjgjng" className={style.van}/>
-           </a>
- 
-           <a href="https://www.linkedin.com/in/julivan-soares/" target="_blank">
-             <BsLinkedin alt="icone-Linkedin"/>
-           </a>
-         </div>
-          <Link href="/JULIVAN_SOARES.pdf" download="JULIVAN_SOARES.pdf" target="_blank" className={style.download}>
-             Baixar Currículo
-          </Link>
-       </div>
+       {/* Social links moved to Nav */}
  
  
      </div>
