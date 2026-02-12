@@ -5,6 +5,7 @@ import style from './style.module.scss'
 import AboutMe from '@/components/AboutMe'
 import Skills from '@/components/skills'
 import Summary from '@/components/Summary'
+import Contact from '@/components/Contact'
 
 
 
@@ -28,6 +29,7 @@ export default function Page() {
       <Skills/>
 
       <Summary/> 
+      <Contact/>
        
     </>
     

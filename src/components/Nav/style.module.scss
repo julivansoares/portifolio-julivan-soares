@@ -64,10 +64,12 @@ $nome-menu:#00EEFF;
     .download{
         background: transparent;
         border: 1px solid $nome-menu;
-        padding: 6px 10px;
-        border-radius: 12px;
+        padding: 2px 6px;
+        border-radius: 6px;
         color: $nome-menu;
         font-family: 'Quicksand', sans-serif;
+        font-size: 0.85rem;
+        line-height: 1;
         text-decoration: none;
     }
     li a{

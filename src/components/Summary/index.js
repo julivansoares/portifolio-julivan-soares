@@ -9,31 +9,31 @@ export default function Summary() {
   const experiencias = [
     {
       id: 0,
-      periodo: "2021 - Atual",
-      empresa: "Nome da Empresa",
-      titulo: "Atendimento de suporte de Nível 1",
-      descricao: "Registro, direcionamento e solução nos chamados técnicos da fila por meio do sistema de gestão de chamados execução nos atendimentos técnicos por acesso remoto, criação e apoio na atualização de base de conhecimentos técnicos e/ou atendimento da demanda"
+      periodo: "2024 - Atual",
+      empresa: "Tribunal Regional Eleitoral da Bahia (Interop)",
+      titulo: "Técnico de Suporte N2",
+      descricao: "Diagnóstico e resolução de incidentes de hardware, sistemas operacionais e redes; configuração, administração e monitoramento de ambientes de rede complexos; análise de logs e eventos para identificação e prevenção de falhas; utilização de ferramentas avançadas de monitoramento de sistemas e redes; documentação de soluções visando padronização e agilidade em atendimentos futuros; escalonamento de incidentes críticos para o suporte de nível 3."
     },
     {
       id: 1,
-      periodo: "2020 - 2021",
-      empresa: "Nome da Empresa",
-      titulo: "Técnico de Informática",
-      descricao: "Realização de atendimento aos colaboradores dentro da sua área de atuação. Realização de manutenção corretiva e preventiva de computadores, impressoras e rede da instituição. Responsável pelo cuidado e manutenção dos laboratórios de informática que são disponibilizados para acesso dos alunos."
+      periodo: "2021 - 2024",
+      empresa: "Solutis",
+      titulo: "Analista de Suporte ao Cliente II",
+      descricao: "Diagnóstico e resolução de problemas de hardware, sistemas operacionais e redes; configuração, gerenciamento e monitoramento de ambientes de rede complexos; análise de logs e eventos do sistema para identificação de falhas; utilização de ferramentas avançadas de monitoramento de sistemas e redes; documentação de soluções visando padronização e agilidade em demandas futuras; escalonamento de incidentes críticos para o suporte de nível 3; monitoramento de conexões com gerenciamento de falhas de rede, controle de carga, status de difusão e atuação como proxy de rede; manutenção e suporte a periféricos como leitores de código de barras, impressoras térmicas, PIN pads e gavetas de dinheiro."
     },
     {
       id: 2,
-      periodo: "2019 - 2020",
-      empresa: "Nome da Empresa",
-      titulo: "Desenvolvedor Web Junior",
-      descricao: "Desenvolvimento de aplicações web utilizando HTML, CSS e JavaScript. Colaboração com equipa na criação de interfaces responsivas e implementação de funcionalidades interativas. Suporte técnico e manutenção de sistemas existentes."
+      periodo: "2020 - 2021",
+      empresa: "Senai Cimatec",
+      titulo: "técnico de Informática (PJ)",
+      descricao: "Suporte técnico em geral, configuração e instalação de redes, manutenção de microcomputadores e atendimento help desk."
     },
     {
       id: 3,
-      periodo: "2018 - 2019",
-      empresa: "Nome da Empresa",
+      periodo: "2019 - 2020",
+      empresa: "Fundação Bahiana de Cardiologia",
       titulo: "Estagiário de TI",
-      descricao: "Auxílio na manutenção de servidores e redes. Suporte técnico básico a usuários. Documentação de processos e procedimentos. Aprendizado prático de infraestrutura de TI e boas práticas."
+      descricao: "Suporte técnico com manutenção de desktops e notebooks, atendimento a usuários de primeiro nível e resolução de incidentes na rede corporativa; configuração e instalação do sistema SMART; manutenção de microcomputadores."
     }
   ];
 
@@ -47,9 +47,9 @@ export default function Summary() {
     },
     {
       id: 1,
-      periodo: "2022 - 2022",
-      titulo: "Curso Intensivo de Desenvolvimento de Software - Fullstack",
-      instituicao: "Cubos Academy"
+      periodo: "2025 - 2026",
+      titulo: " Pós-graduação segurança da informação",
+      instituicao: "Unifacs"
     }
   ];
 

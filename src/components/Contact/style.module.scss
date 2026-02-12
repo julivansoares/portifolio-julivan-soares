@@ -1,0 +1,95 @@
+$cor-principal: #00EEFF;
+$cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
+
+.contato{
+  background: $cor-fundo;
+  color: white;
+  padding: 30px 20px;
+}
+
+.contato_secundario{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contato_secundario h1{
+  color: $cor-principal;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.sub_contato{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.contato_info{
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contato_info .item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  color: #cfcfcf;
+}
+
+.contato_form{
+  background: #111;
+  padding: 18px;
+  border-radius: 8px;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.contato_form .row{
+  display:flex;
+  gap:12px;
+}
+
+.contato_form input,
+.contato_form textarea{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #ddd;
+  padding: 8px 10px;
+  border-radius: 6px;
+  width:100%;
+}
+
+.contato_form textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+.actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.actions button{
+  background: transparent;
+  border: 1px solid $cor-principal;
+  color: $cor-principal;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+.status{
+  color: #9bd;
+}
+
+@media (max-width: 860px){
+  .sub_contato{ grid-template-columns: 1fr; }
+  .contato_form .row{ flex-direction: column; }
+}
