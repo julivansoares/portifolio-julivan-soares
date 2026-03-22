@@ -12,12 +12,35 @@
   --van-top:red;
 }
 
-body {
-  margin: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 

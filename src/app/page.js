@@ -6,6 +6,7 @@ import AboutMe from '@/components/AboutMe'
 import Skills from '@/components/skills'
 import Summary from '@/components/Summary'
 import Contact from '@/components/Contact'
+import ScrollReveal from '@/components/ScrollReveal'
 
 
 
@@ -30,9 +31,13 @@ export default function Page() {
 
       <Summary/> 
       <Contact/>
-       
+      <ScrollReveal />
+      <footer className={style.footer}>
+        <div className={style.footerContent}>
+          <p>© {new Date().getFullYear()} Julivan Soares. Todos os direitos reservados.</p>
+          <p>Desenvolvido com React, Next.js e paixão por tecnologia.</p>
+        </div>
+      </footer>
     </>
-    
-    
   )
 }

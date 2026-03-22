@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function AboutMe() {
 
     return (
-        <main id="about">
+        <main id="about" className="reveal">
             <article aria-label="seção sobre min" className={style.sobre}>
                 <div className={style.titulo}>
                     <h1>Sobre Mim</h1>

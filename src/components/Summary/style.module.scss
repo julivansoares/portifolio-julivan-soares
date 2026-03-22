@@ -272,3 +272,86 @@ $cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
         transform: translate3d(0, 0, 0);
     }
 }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .sub_resumo {
+        padding: 25px;
+        gap: 8px;
+    }
+    .sub_resumo h2 {
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+    .conteudo_experiencia div,
+    .conteudo_educacao div {
+        padding: 30px;
+    }
+    .resumo_secundario h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sub_resumo {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .conteudo_experiencia,
+    .conteudo_educacao {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+    }
+    .sub_resumo h2 {
+        font-size: 1.2rem;
+    }
+    .conteudo_experiencia div,
+    .conteudo_educacao div {
+        padding: 20px;
+    }
+    .resumo_secundario h1 {
+        font-size: 1.8rem;
+    }
+    .resumo_secundario p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub_resumo {
+        padding: 15px;
+        gap: 5px;
+    }
+    .sub_resumo h2 {
+        font-size: 1.1rem;
+        padding: 6px;
+        margin-bottom: 20px;
+    }
+    .conteudo_experiencia ul,
+    .conteudo_educacao ul {
+        gap: 15px;
+        padding: 10px;
+    }
+    .conteudo_experiencia div,
+    .conteudo_educacao div {
+        padding: 15px;
+    }
+    .conteudo_experiencia div span,
+    .conteudo_educacao div span {
+        font-size: 0.9rem;
+    }
+    .conteudo_experiencia div h3,
+    .conteudo_educacao div h3 {
+        font-size: 1rem;
+    }
+    .conteudo_experiencia div p,
+    .conteudo_educacao div p {
+        font-size: 0.95rem;
+    }
+    .resumo_secundario h1 {
+        font-size: 1.5rem;
+    }
+    .resumo_secundario p {
+        font-size: 0.9rem;
+    }
+}

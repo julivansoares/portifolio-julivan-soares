@@ -93,7 +93,7 @@ export default function Summary() {
     inicializarNavegacao();
   }, [indiceExperiencia, indiceEducacao])
   return (
-    <div className={style.resumo} id="resume">
+    <div className={`${style.resumo} reveal`} id="resume">
       {/* Header da seção de Resumo */}
       <div className={style.resumo_secundario}>
         <h1>Resumo</h1>

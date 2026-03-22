@@ -89,7 +89,39 @@ $cor-fundo: linear-gradient(#0a0a0a, hsla(0, 5%, 15%, 0.129));
   color: #9bd;
 }
 
-@media (max-width: 860px){
+@media (max-width: 1200px){
+  .contato_info, .contato_form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px){
   .sub_contato{ grid-template-columns: 1fr; }
   .contato_form .row{ flex-direction: column; }
+  .contato_info .item, .contato_form input, .contato_form textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px){
+  .contato{
+    padding: 15px 10px;
+  }
+  .contato_secondary h1 {
+    font-size: 1.5rem;
+  }
+  .sub_contato{
+    gap: 15px;
+  }
+  .contato_info, .contato_form {
+    padding: 10px;
+  }
+  .contato_form input, .contato_form textarea {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+  .actions button {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
 }

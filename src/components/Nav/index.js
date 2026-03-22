@@ -41,7 +41,7 @@ export default  function Nav(){
               <a href="#resume">Resumo</a>
             </li>
             <li>
-              <a href="#portifolio">Portifolio </a>
+              <a href="#skills">Tecnologias</a>
             </li>
             <li>
               <a href="#contact">Contato</a>

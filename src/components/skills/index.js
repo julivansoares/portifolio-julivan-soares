@@ -7,7 +7,7 @@ export default function Skills() {
 
     return (
 
-        <main className={style.servicos}>
+        <main id="skills" className={`${style.servicos} reveal`} >
             <div className={style.titulo_secundario}>
                 <h1>Tecnologias</h1>
                 <p>Perfil Profissional - Tudo sobre mim</p>

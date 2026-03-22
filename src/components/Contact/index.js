@@ -7,7 +7,7 @@ import { FiPhone } from 'react-icons/fi'
 import { init, sendForm } from '@emailjs/browser'
 
 export default function Contact(){
-  const [form, setForm] = useState({ nome: '', email: '', assunto: '', mensagem: '' })
+  const [form, setForm] = useState({ from_name: '', reply_to: '', subject: '', message: '' })
   const [status, setStatus] = useState('')
   const [sending, setSending] = useState(false)
   const formRef = useRef(null)
@@ -35,26 +35,27 @@ export default function Contact(){
       setSending(true)
       await sendForm(serviceId, templateId, formRef.current)
       setStatus('Mensagem enviada com sucesso!')
-      setForm({ nome: '', email: '', assunto: '', mensagem: '' })
+      setForm({ from_name: '', reply_to: '', subject: '', message: '' })
     }catch(err){
       console.error('EmailJS error', err)
-      setStatus('Erro ao enviar a mensagem. Tente novamente mais tarde.')
+      const message = err?.text || err?.message || String(err)
+      setStatus(`Erro ao enviar a mensagem: ${message}`)
     }finally{
       setSending(false)
-      setTimeout(()=>setStatus(''), 4000)
+      setTimeout(()=>setStatus(''), 6000)
     }
   }
 
   return (
-    <section className={style.contato} id="contact">
+    <section className={`${style.contato} reveal`} id="contact">
       <div className={style.contato_secundario}>
         <h1>Contatos</h1>
-        <p>Entre em contato — informações e formulário</p>
+        <p>Entre em contato</p>
       </div>
 
       <div className={style.sub_contato}>
         <div className={style.contato_info}>
-          <div className={style.item}><FiPhone /> <span>+55 (71) 9XXXX-XXXX</span></div>
+          <div className={style.item}><FiPhone /> <span>+55 (71) 994052920</span></div>
           <div className={style.item}><AiOutlineMail /> <span>julivan.soares@outlook.com</span></div>
           <div className={style.item}><BsLinkedin /> <span>linkedin.com/in/julivan-soares</span></div>
           <div className={style.item}><BsGithub /> <span>github.com/julivansoares</span></div>
@@ -62,11 +63,11 @@ export default function Contact(){
 
         <form ref={formRef} className={style.contato_form} onSubmit={handleSubmit} aria-label="Formulário de contato">
           <div className={style.row}>
-            <input name="nome" placeholder="Nome" value={form.nome} onChange={handleChange} required />
-            <input name="email" type="email" placeholder="E-mail" value={form.email} onChange={handleChange} required />
+            <input name="from_name" placeholder="Nome" value={form.from_name} onChange={handleChange} required />
+            <input name="reply_to" type="email" placeholder="E-mail" value={form.reply_to} onChange={handleChange} required />
           </div>
-          <input name="assunto" placeholder="Assunto" value={form.assunto} onChange={handleChange} />
-          <textarea name="mensagem" placeholder="Mensagem" value={form.mensagem} onChange={handleChange} required />
+          <input name="subject" placeholder="Assunto" value={form.subject} onChange={handleChange} />
+          <textarea name="message" placeholder="Mensagem" value={form.message} onChange={handleChange} required />
           <div className={style.actions}>
             <button type="submit" disabled={sending}>{sending ? 'Enviando...' : 'Enviar'}</button>
             <span className={style.status}>{status}</span>

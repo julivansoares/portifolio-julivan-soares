@@ -8,7 +8,7 @@ export default function Home(){
 
     return(
             
-    <section className={style.home} id="home">
+    <section className={`${style.home} reveal`} id="home">
        
        <div className={style.subHome}>
        <h2>Olá sou</h2>
